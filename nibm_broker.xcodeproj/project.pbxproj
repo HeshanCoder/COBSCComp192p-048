@@ -21,6 +21,7 @@
 		AF11A1B12807331F00F931AC /* SellerAddDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1B02807331F00F931AC /* SellerAddDetailsViewModel.swift */; };
 		AF11A1B42807335D00F931AC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1B32807335D00F931AC /* SettingsView.swift */; };
 		AF11A1B62807338000F931AC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1B52807338000F931AC /* SettingsViewModel.swift */; };
+		AF83470628074BFC007C3F37 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83470528074BFC007C3F37 /* RoundedShape.swift */; };
 		AFDACC3A2805C4460052CD56 /* nibm_brokerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDACC392805C4460052CD56 /* nibm_brokerApp.swift */; };
 		AFDACC3C2805C4460052CD56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDACC3B2805C4460052CD56 /* ContentView.swift */; };
 		AFDACC3E2805C44A0052CD56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDACC3D2805C44A0052CD56 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		AF11A1B02807331F00F931AC /* SellerAddDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerAddDetailsViewModel.swift; sourceTree = "<group>"; };
 		AF11A1B32807335D00F931AC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AF11A1B52807338000F931AC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		AF83470528074BFC007C3F37 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		AFDACC362805C4460052CD56 /* nibm_broker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nibm_broker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDACC392805C4460052CD56 /* nibm_brokerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nibm_brokerApp.swift; sourceTree = "<group>"; };
 		AFDACC3B2805C4460052CD56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		AF83470428074BBC007C3F37 /* Componnet */ = {
+			isa = PBXGroup;
+			children = (
+				AF83470528074BFC007C3F37 /* RoundedShape.swift */,
+			);
+			path = Componnet;
+			sourceTree = "<group>";
+		};
 		AFDACC2D2805C4460052CD56 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +197,7 @@
 		AFDACC382805C4460052CD56 /* nibm_broker */ = {
 			isa = PBXGroup;
 			children = (
+				AF83470428074BBC007C3F37 /* Componnet */,
 				AF11A1B22807333A00F931AC /* Settings */,
 				AF11A1AD280732D100F931AC /* SellerAddDetails */,
 				AF11A1A72807325000F931AC /* AddDetails */,
@@ -366,6 +377,7 @@
 				AF11A1972807300F00F931AC /* GuestHomeViewModel.swift in Sources */,
 				AF11A1B12807331F00F931AC /* SellerAddDetailsViewModel.swift in Sources */,
 				AFDACC3C2805C4460052CD56 /* ContentView.swift in Sources */,
+				AF83470628074BFC007C3F37 /* RoundedShape.swift in Sources */,
 				AF11A1A92807327700F931AC /* AddDetailsView.swift in Sources */,
 				AF11A1A1280731C600F931AC /* SignInViewModel.swift in Sources */,
 				AF11A1AF280732FF00F931AC /* SellerAddDetailsView.swift in Sources */,

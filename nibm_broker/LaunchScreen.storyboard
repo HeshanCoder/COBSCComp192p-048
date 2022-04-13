@@ -35,7 +35,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" red="0.0" green="0.14117647059999999" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
                             <constraint firstItem="iv0-zo-1fp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="qm7-rr-pku"/>
                             <constraint firstItem="iv0-zo-1fp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zMk-PF-0Ba"/>
@@ -50,6 +50,9 @@
     </scenes>
     <resources>
         <image name="NIBMLogo" width="275" height="136"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
