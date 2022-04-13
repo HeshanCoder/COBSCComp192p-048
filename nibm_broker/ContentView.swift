@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("NIBM_Brokes")
-            .padding()
-        
+        VStack(spacing: 16 ){
+            Text("NIBM_Brokes")
+                .padding()
+        }
     }
 }
 struct ContentView_Previews: PreviewProvider {

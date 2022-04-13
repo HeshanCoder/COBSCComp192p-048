@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF11A19528072FE000F931AC /* GuestHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A19428072FE000F931AC /* GuestHomeView.swift */; };
+		AF11A1972807300F00F931AC /* GuestHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1962807300F00F931AC /* GuestHomeViewModel.swift */; };
+		AF11A19A2807306000F931AC /* UserHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1992807306000F931AC /* UserHomeView.swift */; };
+		AF11A19C2807308000F931AC /* UserHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A19B2807308000F931AC /* UserHomeViewModel.swift */; };
+		AF11A19F2807314200F931AC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A19E2807314200F931AC /* SignInView.swift */; };
+		AF11A1A1280731C600F931AC /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1A0280731C600F931AC /* SignInViewModel.swift */; };
+		AF11A1A42807320E00F931AC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1A32807320E00F931AC /* SignUpView.swift */; };
+		AF11A1A62807322A00F931AC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1A52807322A00F931AC /* SignUpViewModel.swift */; };
+		AF11A1A92807327700F931AC /* AddDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1A82807327700F931AC /* AddDetailsView.swift */; };
+		AF11A1AB2807328B00F931AC /* AddDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1AA2807328B00F931AC /* AddDetailsViewModel.swift */; };
+		AF11A1AF280732FF00F931AC /* SellerAddDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1AE280732FF00F931AC /* SellerAddDetailsView.swift */; };
+		AF11A1B12807331F00F931AC /* SellerAddDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1B02807331F00F931AC /* SellerAddDetailsViewModel.swift */; };
+		AF11A1B42807335D00F931AC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1B32807335D00F931AC /* SettingsView.swift */; };
+		AF11A1B62807338000F931AC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1B52807338000F931AC /* SettingsViewModel.swift */; };
 		AFDACC3A2805C4460052CD56 /* nibm_brokerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDACC392805C4460052CD56 /* nibm_brokerApp.swift */; };
 		AFDACC3C2805C4460052CD56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDACC3B2805C4460052CD56 /* ContentView.swift */; };
 		AFDACC3E2805C44A0052CD56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFDACC3D2805C44A0052CD56 /* Assets.xcassets */; };
@@ -35,6 +49,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF11A19428072FE000F931AC /* GuestHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestHomeView.swift; sourceTree = "<group>"; };
+		AF11A1962807300F00F931AC /* GuestHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestHomeViewModel.swift; sourceTree = "<group>"; };
+		AF11A1992807306000F931AC /* UserHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeView.swift; sourceTree = "<group>"; };
+		AF11A19B2807308000F931AC /* UserHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeViewModel.swift; sourceTree = "<group>"; };
+		AF11A19E2807314200F931AC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		AF11A1A0280731C600F931AC /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		AF11A1A32807320E00F931AC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		AF11A1A52807322A00F931AC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		AF11A1A82807327700F931AC /* AddDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsView.swift; sourceTree = "<group>"; };
+		AF11A1AA2807328B00F931AC /* AddDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsViewModel.swift; sourceTree = "<group>"; };
+		AF11A1AE280732FF00F931AC /* SellerAddDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerAddDetailsView.swift; sourceTree = "<group>"; };
+		AF11A1B02807331F00F931AC /* SellerAddDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerAddDetailsViewModel.swift; sourceTree = "<group>"; };
+		AF11A1B32807335D00F931AC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AF11A1B52807338000F931AC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		AFDACC362805C4460052CD56 /* nibm_broker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nibm_broker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDACC392805C4460052CD56 /* nibm_brokerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nibm_brokerApp.swift; sourceTree = "<group>"; };
 		AFDACC3B2805C4460052CD56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +101,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF11A19328072F7E00F931AC /* GuestHome */ = {
+			isa = PBXGroup;
+			children = (
+				AF11A19428072FE000F931AC /* GuestHomeView.swift */,
+				AF11A1962807300F00F931AC /* GuestHomeViewModel.swift */,
+			);
+			path = GuestHome;
+			sourceTree = "<group>";
+		};
+		AF11A1982807302500F931AC /* UserHome */ = {
+			isa = PBXGroup;
+			children = (
+				AF11A1992807306000F931AC /* UserHomeView.swift */,
+				AF11A19B2807308000F931AC /* UserHomeViewModel.swift */,
+			);
+			path = UserHome;
+			sourceTree = "<group>";
+		};
+		AF11A19D2807312100F931AC /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				AF11A19E2807314200F931AC /* SignInView.swift */,
+				AF11A1A0280731C600F931AC /* SignInViewModel.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		AF11A1A2280731ED00F931AC /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				AF11A1A32807320E00F931AC /* SignUpView.swift */,
+				AF11A1A52807322A00F931AC /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		AF11A1A72807325000F931AC /* AddDetails */ = {
+			isa = PBXGroup;
+			children = (
+				AF11A1A82807327700F931AC /* AddDetailsView.swift */,
+				AF11A1AA2807328B00F931AC /* AddDetailsViewModel.swift */,
+			);
+			path = AddDetails;
+			sourceTree = "<group>";
+		};
+		AF11A1AD280732D100F931AC /* SellerAddDetails */ = {
+			isa = PBXGroup;
+			children = (
+				AF11A1AE280732FF00F931AC /* SellerAddDetailsView.swift */,
+				AF11A1B02807331F00F931AC /* SellerAddDetailsViewModel.swift */,
+			);
+			path = SellerAddDetails;
+			sourceTree = "<group>";
+		};
+		AF11A1B22807333A00F931AC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AF11A1B32807335D00F931AC /* SettingsView.swift */,
+				AF11A1B52807338000F931AC /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		AFDACC2D2805C4460052CD56 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +187,13 @@
 		AFDACC382805C4460052CD56 /* nibm_broker */ = {
 			isa = PBXGroup;
 			children = (
+				AF11A1B22807333A00F931AC /* Settings */,
+				AF11A1AD280732D100F931AC /* SellerAddDetails */,
+				AF11A1A72807325000F931AC /* AddDetails */,
+				AF11A1A2280731ED00F931AC /* SignUp */,
+				AF11A19D2807312100F931AC /* SignIn */,
+				AF11A1982807302500F931AC /* UserHome */,
+				AF11A19328072F7E00F931AC /* GuestHome */,
 				AFDACC392805C4460052CD56 /* nibm_brokerApp.swift */,
 				AFDACC3B2805C4460052CD56 /* ContentView.swift */,
 				AFDACC3D2805C44A0052CD56 /* Assets.xcassets */,
@@ -261,8 +359,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF11A1B42807335D00F931AC /* SettingsView.swift in Sources */,
+				AF11A19C2807308000F931AC /* UserHomeViewModel.swift in Sources */,
+				AF11A19F2807314200F931AC /* SignInView.swift in Sources */,
+				AF11A1A62807322A00F931AC /* SignUpViewModel.swift in Sources */,
+				AF11A1972807300F00F931AC /* GuestHomeViewModel.swift in Sources */,
+				AF11A1B12807331F00F931AC /* SellerAddDetailsViewModel.swift in Sources */,
 				AFDACC3C2805C4460052CD56 /* ContentView.swift in Sources */,
+				AF11A1A92807327700F931AC /* AddDetailsView.swift in Sources */,
+				AF11A1A1280731C600F931AC /* SignInViewModel.swift in Sources */,
+				AF11A1AF280732FF00F931AC /* SellerAddDetailsView.swift in Sources */,
+				AF11A19A2807306000F931AC /* UserHomeView.swift in Sources */,
+				AF11A19528072FE000F931AC /* GuestHomeView.swift in Sources */,
+				AF11A1A42807320E00F931AC /* SignUpView.swift in Sources */,
 				AFDACC3A2805C4460052CD56 /* nibm_brokerApp.swift in Sources */,
+				AF11A1AB2807328B00F931AC /* AddDetailsViewModel.swift in Sources */,
+				AF11A1B62807338000F931AC /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
