@@ -32,8 +32,11 @@ struct SignInView: View {
             .foregroundColor(.white)
             
             VStack(spacing : 40){
-                TextField("Email",text: $email)
-                TextField("Password",text: $password)
+                //TextField("Email",text: $email)
+                //TextField("Password",text: $password)
+                CustomInputtField(imageName: "envelope", placeHolderText: "Email", text: $email)
+                
+                CustomInputtField(imageName: "lock", placeHolderText: "Password", text: $password)
             }
             .padding(.horizontal,32)
             .padding(.top,44)
@@ -44,7 +47,7 @@ struct SignInView: View {
                     Text("Reset Pasword")
                     
                 } label : {
-                    Text("Forget Password")
+                    Text("Forget Password?")
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(Color(.systemBlue))
@@ -67,8 +70,26 @@ struct SignInView: View {
             }
             .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
             Spacer()
+    
+            NavigationLink{
+                SignUpView()
+                    //.navigationBarHidden(true)
+            } label: {
+                HStack{
+                    Text("Dont hava an account? ")
+                        .font(.footnote)
+                    Text("Sign Up")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                    
+                }
+            }
+            .padding(.bottom,50)
+            .foregroundColor(Color(.systemBlue))
+           
         }
         .ignoresSafeArea()
+        .navigationBarHidden(true)
     }
 }
 

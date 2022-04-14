@@ -11,7 +11,10 @@ import SwiftUI
 struct nibm_brokerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            NavigationView{
+                SignInView()
+            }
         }
     }
 }
