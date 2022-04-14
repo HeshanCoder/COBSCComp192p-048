@@ -13,7 +13,7 @@ struct nibm_brokerApp: App {
         WindowGroup {
             //ContentView()
             NavigationView{
-                SignInView()
+                UserHomeView()
             }
         }
     }
