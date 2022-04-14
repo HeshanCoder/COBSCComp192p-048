@@ -23,6 +23,8 @@
 		AF11A1B62807338000F931AC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1B52807338000F931AC /* SettingsViewModel.swift */; };
 		AF21A5882808587F003D0FF5 /* AddRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21A5872808587F003D0FF5 /* AddRowView.swift */; };
 		AF21A58A280863C7003D0FF5 /* HeaderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21A589280863C7003D0FF5 /* HeaderBarView.swift */; };
+		AF21A58C28087E26003D0FF5 /* SelectOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21A58B28087E26003D0FF5 /* SelectOptionView.swift */; };
+		AF21A58E280885AD003D0FF5 /* MenuPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21A58D280885AD003D0FF5 /* MenuPickerView.swift */; };
 		AF4137322807F59A00E65934 /* CustomInputtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4137312807F59A00E65934 /* CustomInputtField.swift */; };
 		AF83470628074BFC007C3F37 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83470528074BFC007C3F37 /* RoundedShape.swift */; };
 		AFDACC3A2805C4460052CD56 /* nibm_brokerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDACC392805C4460052CD56 /* nibm_brokerApp.swift */; };
@@ -69,6 +71,8 @@
 		AF11A1B52807338000F931AC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		AF21A5872808587F003D0FF5 /* AddRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRowView.swift; sourceTree = "<group>"; };
 		AF21A589280863C7003D0FF5 /* HeaderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBarView.swift; sourceTree = "<group>"; };
+		AF21A58B28087E26003D0FF5 /* SelectOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionView.swift; sourceTree = "<group>"; };
+		AF21A58D280885AD003D0FF5 /* MenuPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPickerView.swift; sourceTree = "<group>"; };
 		AF4137312807F59A00E65934 /* CustomInputtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputtField.swift; sourceTree = "<group>"; };
 		AF83470528074BFC007C3F37 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		AFDACC362805C4460052CD56 /* nibm_broker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nibm_broker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +183,8 @@
 				AF4137312807F59A00E65934 /* CustomInputtField.swift */,
 				AF21A5872808587F003D0FF5 /* AddRowView.swift */,
 				AF21A589280863C7003D0FF5 /* HeaderBarView.swift */,
+				AF21A58B28087E26003D0FF5 /* SelectOptionView.swift */,
+				AF21A58D280885AD003D0FF5 /* MenuPickerView.swift */,
 			);
 			path = Componnet;
 			sourceTree = "<group>";
@@ -388,11 +394,13 @@
 				AF11A1B12807331F00F931AC /* SellerAddDetailsViewModel.swift in Sources */,
 				AF21A58A280863C7003D0FF5 /* HeaderBarView.swift in Sources */,
 				AFDACC3C2805C4460052CD56 /* ContentView.swift in Sources */,
+				AF21A58C28087E26003D0FF5 /* SelectOptionView.swift in Sources */,
 				AF83470628074BFC007C3F37 /* RoundedShape.swift in Sources */,
 				AF11A1A92807327700F931AC /* AddDetailsView.swift in Sources */,
 				AF4137322807F59A00E65934 /* CustomInputtField.swift in Sources */,
 				AF11A1A1280731C600F931AC /* SignInViewModel.swift in Sources */,
 				AF11A1AF280732FF00F931AC /* SellerAddDetailsView.swift in Sources */,
+				AF21A58E280885AD003D0FF5 /* MenuPickerView.swift in Sources */,
 				AF11A19A2807306000F931AC /* UserHomeView.swift in Sources */,
 				AF11A19528072FE000F931AC /* GuestHomeView.swift in Sources */,
 				AF11A1A42807320E00F931AC /* SignUpView.swift in Sources */,

@@ -31,8 +31,6 @@ struct HeaderBarView: View {
         .padding(.leading)
         .background(.white)
         .foregroundColor(.white)
-        
-        
     }
 }
 

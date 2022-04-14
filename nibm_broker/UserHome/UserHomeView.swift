@@ -11,6 +11,10 @@ struct UserHomeView: View {
     var body: some View {
         VStack{
             HeaderBarView()
+            HStack{
+                MenuPickerView(typeText:"House/Land")
+                MenuPickerView(typeText:"District")
+            }
             ScrollView{
                 LazyVStack{
                     ForEach(0...20, id: \.self){ _ in
