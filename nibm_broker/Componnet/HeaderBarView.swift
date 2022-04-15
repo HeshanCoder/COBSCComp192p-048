@@ -12,7 +12,7 @@ struct HeaderBarView: View {
         // Header View
         VStack(alignment: .leading){
             HStack{Spacer()}
-
+            HStack{
             NavigationLink{
                 SettingsView()
             }label :{
@@ -26,6 +26,22 @@ struct HeaderBarView: View {
                     
             }
             .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
+            
+            NavigationLink{
+                SellerAddDetailsView()
+            }label :{
+                Text("Sell $")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .frame(width: 88, height: 50)
+                    .background(Color(.systemBlue))
+                    .clipShape(Capsule())
+                    .padding(.bottom,10)
+                    
+            }
+            .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
+            }
+            
             Divider().foregroundColor(.black)
         }
         .frame(height:65)
