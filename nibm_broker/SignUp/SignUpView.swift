@@ -18,6 +18,7 @@ struct SignUpView: View {
     @State private var cmPassword: String = ""
     @State private var location: String = ""
     @Environment(\.presentationMode) var presentationModeSu
+    @EnvironmentObject var viewModel : SignInViewModel
     
     var body: some View {
         VStack{
@@ -70,7 +71,7 @@ struct SignUpView: View {
             .padding(32)
             
             Button{
-                print("Sign Up button click")
+                viewModel.register(withemail: email, password: password, username: username, gender: gender, birthDate: dob, name: name, mobile: mobile, location: location)
             } label : {
                 Text("Sign Up")
                     .font(.headline)

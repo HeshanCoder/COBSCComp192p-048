@@ -13,7 +13,26 @@ struct AddRowView: View {
     @State private var landSize = ""
     @State private var district = ""
     @State private var townOrVillage = ""
+    
+    // Envirenment objects can usen in whole applicaton
+    // Initialized it when app start time.
+    @EnvironmentObject var viewModel : SignInViewModel
+    
     var body: some View {
+        Group{
+            addRowMainInterfaceView
+        }
+    }
+}
+
+struct AddRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        AddRowView()
+    }
+}
+
+extension AddRowView {
+    var addRowMainInterfaceView : some View{
         VStack(alignment: .leading){
             HStack(alignment: .top, spacing: 30){
                 // Image
@@ -56,18 +75,21 @@ struct AddRowView: View {
                             .bold()
                         
                         NavigationLink{
-                            AddDetailsView()
-                            
+                            if(viewModel.userSession == nil){
+                                SignInView()
+                            }else{
+                                AddDetailsView()
+                            }
                         } label:{
                             Text("View")
                         }
                         .font(.headline)
-                            .foregroundColor(.white)
-                            .frame(width: 60, height: 22)
-                            .background(Color(.systemBlue))
-                            .clipShape(Capsule())
-                            .padding(.leading)
-                       
+                        .foregroundColor(.white)
+                        .frame(width: 60, height: 22)
+                        .background(Color(.systemBlue))
+                        .clipShape(Capsule())
+                        .padding(.leading)
+                        
                     }
                 }
                 .frame(height:100)
@@ -80,11 +102,5 @@ struct AddRowView: View {
         .padding(.leading)
         .padding(.top)
         
-    }
-}
-
-struct AddRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddRowView()
     }
 }

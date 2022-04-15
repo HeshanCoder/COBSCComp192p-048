@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
     @State private var email: String = ""
     @State private var username: String = ""
     @State private var gender: String = ""
@@ -19,7 +20,7 @@ struct SettingsView: View {
     @State private var newCmPassword: String = ""
     @State private var location: String = ""
     @Environment(\.presentationMode) var mode
-    
+    @EnvironmentObject var AuthViewModel : SignInViewModel
     var body: some View {
         VStack{
             
@@ -90,8 +91,9 @@ struct SettingsView: View {
             .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
             Spacer()
             
-            NavigationLink{
-                SignUpView()
+            Button{
+                AuthViewModel.signOut()
+                mode.wrappedValue.dismiss()
                 //.navigationBarHidden(true)
             } label: {
                 HStack{

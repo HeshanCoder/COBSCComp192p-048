@@ -12,6 +12,8 @@ struct SignInView: View {
     @State private var email = ""
     @State private var password = ""
     @Environment(\.presentationMode) var presentationModesn
+    @EnvironmentObject var viewModel : SignInViewModel
+    
     var body: some View {
         VStack{
             
@@ -68,7 +70,7 @@ struct SignInView: View {
                 }
             }
             Button{
-                print("Sign in button click")
+                viewModel.login(withemail: email, password: password)
             } label : {
                 Text("Sign In")
                     .font(.headline)

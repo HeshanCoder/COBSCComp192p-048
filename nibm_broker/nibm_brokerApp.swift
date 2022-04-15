@@ -10,17 +10,16 @@ import Firebase
 
 @main
 struct nibm_brokerApp: App {
-    
+    @StateObject var viewModel = SignInViewModel()
     init(){
         FirebaseApp.configure()
     }
     var body: some Scene {
         WindowGroup {
-            //ContentView()
             NavigationView{
                 UserHomeView()
-                //AddDetailsView()
-            }
+                   
+            } .environmentObject(viewModel)
         }
     }
 }
