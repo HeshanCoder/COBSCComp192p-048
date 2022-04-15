@@ -11,13 +11,24 @@ struct SignInView: View {
     
     @State private var email = ""
     @State private var password = ""
-    
+    @Environment(\.presentationMode) var presentationModesn
     var body: some View {
         VStack{
             
             // Header View
             VStack(alignment: .leading){
                 HStack{Spacer()}
+                
+                Button{
+                    presentationModesn.wrappedValue.dismiss()
+                    
+                }label:{
+                    Image(systemName: "arrow.left")
+                        .resizable()
+                        .frame(width: 20 , height: 16)
+                        .foregroundColor(.white)
+                        .offset(x: 1, y: 12)
+                }
                 Text("Hello")
                     .font(.largeTitle)
                     .fontWeight(.semibold)

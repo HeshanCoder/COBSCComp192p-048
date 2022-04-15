@@ -17,12 +17,22 @@ struct SignUpView: View {
     @State private var password: String = ""
     @State private var cmPassword: String = ""
     @State private var location: String = ""
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) var presentationModeSu
     
     var body: some View {
         VStack{
             VStack(alignment: .leading){
                 HStack{Spacer()}
+                NavigationLink{
+                    SignInView()
+                    
+                }label:{
+                    Image(systemName: "arrow.left")
+                        .resizable()
+                        .frame(width: 20 , height: 16)
+                        .foregroundColor(.white)
+                        .offset(x: 1, y: 12)
+                }
                 Text("Hello..!,")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
@@ -78,7 +88,7 @@ struct SignUpView: View {
             Spacer()
             
             Button{
-                presentationMode.wrappedValue.dismiss()
+                presentationModeSu.wrappedValue.dismiss()
             } label:{
                 HStack{
                     Text("Already hasva an account? ")
@@ -93,7 +103,7 @@ struct SignUpView: View {
             .foregroundColor(Color(.systemBlue))
             
         }
-        //.navigationBarHidden(false)
+        .navigationBarHidden(false)
         .ignoresSafeArea()
     }
 }

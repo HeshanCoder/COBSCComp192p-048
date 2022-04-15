@@ -54,11 +54,14 @@ struct AddRowView: View {
                         Text("Town")
                             .font(.title3)
                             .bold()
-                        Button{
-                            print("View Button click")
+                        
+                        NavigationLink{
+                            AddDetailsView()
+                            
                         } label:{
                             Text("View")
-                        }.font(.headline)
+                        }
+                        .font(.headline)
                             .foregroundColor(.white)
                             .frame(width: 60, height: 22)
                             .background(Color(.systemBlue))

@@ -29,6 +29,7 @@ struct HeaderBarView: View {
             
             NavigationLink{
                 SellerAddDetailsView()
+                
             }label :{
                 Text("Sell $")
                     .font(.headline)
@@ -40,7 +41,25 @@ struct HeaderBarView: View {
                     
             }
             .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
+                
+                NavigationLink{
+                    SignInView()
+                }label :{
+                    Text("Sign In")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(width: 88, height: 50)
+                        .background(Color(.systemBlue))
+                        .clipShape(Capsule())
+                        .padding(.bottom,10)
+                        
+                }
+                .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
+                
+                
             }
+            
+            
             
             Divider().foregroundColor(.black)
         }
