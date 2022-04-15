@@ -12,8 +12,9 @@ struct HeaderBarView: View {
         // Header View
         VStack(alignment: .leading){
             HStack{Spacer()}
-            Button{
-                print("Setting Button Pressed")
+
+            NavigationLink{
+                SettingsView()
             }label :{
                 Text("Setting")
                     .font(.headline)
