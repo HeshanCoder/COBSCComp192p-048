@@ -14,6 +14,7 @@ struct nibm_brokerApp: App {
             //ContentView()
             NavigationView{
                 UserHomeView()
+                //AddDetailsView()
             }
         }
     }
