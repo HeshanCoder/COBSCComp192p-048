@@ -21,6 +21,8 @@ struct SettingsView: View {
     @State private var location: String = ""
     @Environment(\.presentationMode) var mode
     @EnvironmentObject var AuthViewModel : SignInViewModel
+    
+    
     var body: some View {
         VStack{
             

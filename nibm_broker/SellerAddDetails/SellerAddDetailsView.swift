@@ -18,6 +18,11 @@ struct SellerAddDetailsView: View {
    
     @Environment(\.presentationMode) var mode
     
+    
+    @State private var showImagePicker = false
+    @State private var selectedImage : UIImage?
+    @State private var itemImage : Image?
+    
     var body: some View {
         VStack{
             
@@ -48,14 +53,24 @@ struct SellerAddDetailsView: View {
             
             VStack(spacing : 20){
                 
-                
-                Rectangle()
-                    .frame(width: 250, height: 250)
-                    .foregroundColor(Color(.systemBlue))
-                    
-                
-                
-                
+                Button{
+                    showImagePicker.toggle()
+                }label:{
+                    if let itemImage = itemImage {
+                        itemImage
+                            .resizable()
+                            .modifier(ProfileImageModifire())
+                    }else{
+                    Image(systemName: "tray.and.arrow.down.fill")
+                            .renderingMode(.template)
+                            .modifier(ProfileImageModifire())
+                    }
+                }
+                .sheet(isPresented: $showImagePicker,
+                onDismiss: loadImage){
+                    ImagePicker(selectedImage: $selectedImage)
+                }
+            
                 CustomInputtField(imageName: "dollarsign.circle", placeHolderText: "Price", text: $price)
                 
                 CustomInputtField(imageName: "bookmark.fill", placeHolderText: "Land / House", text: $landorHousee)
@@ -92,11 +107,28 @@ struct SellerAddDetailsView: View {
             .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
             Spacer()
             
-            
+           
             
         }
         .ignoresSafeArea()
         .navigationBarHidden(true)
+        
+        
+    }
+    func loadImage(){
+        guard let selectedImage = selectedImage else {
+            return
+        }
+        itemImage = Image(uiImage: selectedImage)
+    }
+}
+
+private struct  ProfileImageModifire : ViewModifier{
+    func body(content : Content) -> some View {
+        content
+            .foregroundColor(Color(.systemBlue))
+            .scaledToFit()
+            .frame(width: 150, height: 150)
     }
 }
 

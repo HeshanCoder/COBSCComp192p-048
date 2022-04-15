@@ -11,6 +11,7 @@ struct SignInView: View {
     
     @State private var email = ""
     @State private var password = ""
+    
     @Environment(\.presentationMode) var presentationModesn
     @EnvironmentObject var viewModel : SignInViewModel
     
@@ -49,7 +50,7 @@ struct SignInView: View {
                 //TextField("Password",text: $password)
                 CustomInputtField(imageName: "envelope", placeHolderText: "Email", text: $email)
                 
-                CustomInputtField(imageName: "lock", placeHolderText: "Password", text: $password)
+                CustomInputtField(imageName: "lock", placeHolderText: "Password", isSecureField: true,  text: $password)
             }
             .padding(.horizontal,32)
             .padding(.top,44)

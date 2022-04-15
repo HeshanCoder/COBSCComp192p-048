@@ -26,6 +26,7 @@
 		AF21A58C28087E26003D0FF5 /* SelectOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21A58B28087E26003D0FF5 /* SelectOptionView.swift */; };
 		AF21A58E280885AD003D0FF5 /* MenuPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21A58D280885AD003D0FF5 /* MenuPickerView.swift */; };
 		AF4137322807F59A00E65934 /* CustomInputtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4137312807F59A00E65934 /* CustomInputtField.swift */; };
+		AF64D007280A0C5C0010E8A3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF64D006280A0C5C0010E8A3 /* ImagePicker.swift */; };
 		AF76AA9528099DDC00E677D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF76AA9428099DDC00E677D5 /* GoogleService-Info.plist */; };
 		AF76AA982809A36E00E677D5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF76AA972809A36E00E677D5 /* FirebaseAuth */; };
 		AF76AA9A2809A36E00E677D5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF76AA992809A36E00E677D5 /* FirebaseFirestore */; };
@@ -79,6 +80,7 @@
 		AF21A58B28087E26003D0FF5 /* SelectOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionView.swift; sourceTree = "<group>"; };
 		AF21A58D280885AD003D0FF5 /* MenuPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPickerView.swift; sourceTree = "<group>"; };
 		AF4137312807F59A00E65934 /* CustomInputtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputtField.swift; sourceTree = "<group>"; };
+		AF64D006280A0C5C0010E8A3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		AF76AA9428099DDC00E677D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AF83470528074BFC007C3F37 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		AFDACC362805C4460052CD56 /* nibm_broker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nibm_broker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		AF64D005280A0C2F0010E8A3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AF64D006280A0C5C0010E8A3 /* ImagePicker.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		AF83470428074BBC007C3F37 /* Componnet */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +232,7 @@
 		AFDACC382805C4460052CD56 /* nibm_broker */ = {
 			isa = PBXGroup;
 			children = (
+				AF64D005280A0C2F0010E8A3 /* Utils */,
 				AF83470428074BBC007C3F37 /* Componnet */,
 				AF11A1B22807333A00F931AC /* Settings */,
 				AF11A1AD280732D100F931AC /* SellerAddDetails */,
@@ -419,6 +430,7 @@
 				AF83470628074BFC007C3F37 /* RoundedShape.swift in Sources */,
 				AF11A1A92807327700F931AC /* AddDetailsView.swift in Sources */,
 				AF4137322807F59A00E65934 /* CustomInputtField.swift in Sources */,
+				AF64D007280A0C5C0010E8A3 /* ImagePicker.swift in Sources */,
 				AF11A1A1280731C600F931AC /* SignInViewModel.swift in Sources */,
 				AF11A1AF280732FF00F931AC /* SellerAddDetailsView.swift in Sources */,
 				AF21A58E280885AD003D0FF5 /* MenuPickerView.swift in Sources */,

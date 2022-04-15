@@ -62,9 +62,9 @@ struct SignUpView: View {
                 
                 CustomInputtField(imageName: "location", placeHolderText: "Location", text: $location)
                 
-                CustomInputtField(imageName: "lock", placeHolderText: "Password", text: $password)
+                CustomInputtField(imageName: "lock", placeHolderText: "Password", isSecureField: true, text: $password)
                 
-                CustomInputtField(imageName: "lock", placeHolderText: "Confirm Passrod", text: $cmPassword)
+                CustomInputtField(imageName: "lock", placeHolderText: "Confirm Passrod", isSecureField: true,  text: $cmPassword)
              
                 
             }
