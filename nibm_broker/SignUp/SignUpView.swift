@@ -17,8 +17,22 @@ struct SignUpView: View {
     @State private var password: String = ""
     @State private var cmPassword: String = ""
     @State private var location: String = ""
+    @State private var GEOLocation: String = ""
     @Environment(\.presentationMode) var presentationModeSu
     @EnvironmentObject var viewModel : SignInViewModel
+    
+    private var signUpViewModel : SignUpViewModel
+    //@StateObject var locationManager = LocationManager()
+    init(){
+        signUpViewModel = SignUpViewModel()
+        
+        print("DEBUG : Geo Location \(self.location)")
+        //print("DEBUG : Geo Location \(locationManager.lastLocation?.coordinate.latitude ?? 0)")
+        print("DEBUG : Geo Location \(signUpViewModel.$geoLocation)")
+        print("DEBUG : Geo Location \(signUpViewModel.geoLocation)")
+        print("DEBUG : Geo Location \(signUpViewModel.getGeoLocation())")
+        //print("DEBUG : Geo Location \(signUpViewModel.getGeoLocation())")
+    }
     
     var body: some View {
         VStack{
@@ -60,7 +74,9 @@ struct SignUpView: View {
                 
                 CustomInputtField(imageName: "phone", placeHolderText: "Mobile", text: $mobile)
                 
-                CustomInputtField(imageName: "location", placeHolderText: "Location", text: $location)
+                CustomInputtField(imageName: "location", placeHolderText: "Location", text:  $location).onAppear{
+                    self.location = signUpViewModel.geoLocation
+                }
                 
                 CustomInputtField(imageName: "lock", placeHolderText: "Password", isSecureField: true, text: $password)
                 

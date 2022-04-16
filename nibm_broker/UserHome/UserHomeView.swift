@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct UserHomeView: View {
+    private var district = ["Colombo","Kurunegala","Kandy","Galle"]
+    private var itemType = ["House", "Land"]
     var body: some View {
         VStack{
             HeaderBarView()
             HStack{
-                MenuPickerView(typeText:"House/Land")
-                MenuPickerView(typeText:"District")
+                MenuPickerView(typeText:"House/Land", options: itemType)
+                MenuPickerView(typeText:"District",options: district)
             }
             ScrollView{
                 LazyVStack{

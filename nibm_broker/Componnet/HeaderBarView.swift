@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct HeaderBarView: View {
+    
+    @EnvironmentObject var viewModel : SignInViewModel
+    
     var body: some View {
         // Header View
         VStack(alignment: .leading){
             HStack{Spacer()}
             HStack{
             NavigationLink{
-                SettingsView()
+                if(viewModel.userSession?.uid != nil){
+                    SettingsView()
+                }else{
+                    SignInView()
+                }
+                
             }label :{
                 Text("Setting")
                     .font(.headline)

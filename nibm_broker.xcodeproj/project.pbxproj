@@ -21,6 +21,9 @@
 		AF11A1B12807331F00F931AC /* SellerAddDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1B02807331F00F931AC /* SellerAddDetailsViewModel.swift */; };
 		AF11A1B42807335D00F931AC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1B32807335D00F931AC /* SettingsView.swift */; };
 		AF11A1B62807338000F931AC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF11A1B52807338000F931AC /* SettingsViewModel.swift */; };
+		AF1C27E0280AB74100B60609 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C27DF280AB74100B60609 /* ImageUploader.swift */; };
+		AF1C27E3280AC34F00B60609 /* AdvertiementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C27E2280AC34F00B60609 /* AdvertiementModel.swift */; };
+		AF1C27E5280ADC8700B60609 /* locationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C27E4280ADC8700B60609 /* locationManager.swift */; };
 		AF21A5882808587F003D0FF5 /* AddRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21A5872808587F003D0FF5 /* AddRowView.swift */; };
 		AF21A58A280863C7003D0FF5 /* HeaderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21A589280863C7003D0FF5 /* HeaderBarView.swift */; };
 		AF21A58C28087E26003D0FF5 /* SelectOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21A58B28087E26003D0FF5 /* SelectOptionView.swift */; };
@@ -75,6 +78,9 @@
 		AF11A1B02807331F00F931AC /* SellerAddDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerAddDetailsViewModel.swift; sourceTree = "<group>"; };
 		AF11A1B32807335D00F931AC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AF11A1B52807338000F931AC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		AF1C27DF280AB74100B60609 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		AF1C27E2280AC34F00B60609 /* AdvertiementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertiementModel.swift; sourceTree = "<group>"; };
+		AF1C27E4280ADC8700B60609 /* locationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationManager.swift; sourceTree = "<group>"; };
 		AF21A5872808587F003D0FF5 /* AddRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRowView.swift; sourceTree = "<group>"; };
 		AF21A589280863C7003D0FF5 /* HeaderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBarView.swift; sourceTree = "<group>"; };
 		AF21A58B28087E26003D0FF5 /* SelectOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionView.swift; sourceTree = "<group>"; };
@@ -188,6 +194,23 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		AF1C27DE280AB70D00B60609 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF1C27DF280AB74100B60609 /* ImageUploader.swift */,
+				AF1C27E4280ADC8700B60609 /* locationManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AF1C27E1280AC31C00B60609 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF1C27E2280AC34F00B60609 /* AdvertiementModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AF64D005280A0C2F0010E8A3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +255,8 @@
 		AFDACC382805C4460052CD56 /* nibm_broker */ = {
 			isa = PBXGroup;
 			children = (
+				AF1C27E1280AC31C00B60609 /* Models */,
+				AF1C27DE280AB70D00B60609 /* Services */,
 				AF64D005280A0C2F0010E8A3 /* Utils */,
 				AF83470428074BBC007C3F37 /* Componnet */,
 				AF11A1B22807333A00F931AC /* Settings */,
@@ -422,8 +447,10 @@
 				AF21A5882808587F003D0FF5 /* AddRowView.swift in Sources */,
 				AF11A19F2807314200F931AC /* SignInView.swift in Sources */,
 				AF11A1A62807322A00F931AC /* SignUpViewModel.swift in Sources */,
+				AF1C27E0280AB74100B60609 /* ImageUploader.swift in Sources */,
 				AF11A1972807300F00F931AC /* GuestHomeViewModel.swift in Sources */,
 				AF11A1B12807331F00F931AC /* SellerAddDetailsViewModel.swift in Sources */,
+				AF1C27E5280ADC8700B60609 /* locationManager.swift in Sources */,
 				AF21A58A280863C7003D0FF5 /* HeaderBarView.swift in Sources */,
 				AFDACC3C2805C4460052CD56 /* ContentView.swift in Sources */,
 				AF21A58C28087E26003D0FF5 /* SelectOptionView.swift in Sources */,
@@ -437,6 +464,7 @@
 				AF11A19A2807306000F931AC /* UserHomeView.swift in Sources */,
 				AF11A19528072FE000F931AC /* GuestHomeView.swift in Sources */,
 				AF11A1A42807320E00F931AC /* SignUpView.swift in Sources */,
+				AF1C27E3280AC34F00B60609 /* AdvertiementModel.swift in Sources */,
 				AFDACC3A2805C4460052CD56 /* nibm_brokerApp.swift in Sources */,
 				AF11A1AB2807328B00F931AC /* AddDetailsViewModel.swift in Sources */,
 				AF11A1B62807338000F931AC /* SettingsViewModel.swift in Sources */,

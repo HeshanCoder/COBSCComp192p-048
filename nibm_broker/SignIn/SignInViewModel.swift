@@ -11,6 +11,7 @@ import Firebase
 class SignInViewModel :  ObservableObject{
     // any view that use SignInViewModel can access this userSession because it is set as @Published
     @Published var userSession : Firebase.User?
+    private var tempUserSession : Firebase.User?
     
     init(){
         self.userSession = Auth.auth().currentUser
@@ -74,5 +75,16 @@ class SignInViewModel :  ObservableObject{
     func signOut(){
         self.userSession = nil
         try? Auth.auth().signOut()
+    }
+    
+    func uploadProfileImage(_ image : UIImage){
+        guard let uid = tempUserSession?.uid else{return}
+        ImageUploader.uploadImage(image: image) { profileImageURL in
+            Firestore.firestore().collection("users")
+                .document(uid)
+                .updateData(["ProfileImageURL" : profileImageURL]) { _ in
+                    self.userSession = self.tempUserSession
+                }
+        }
     }
 }

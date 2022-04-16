@@ -36,9 +36,10 @@ extension AddRowView {
         VStack(alignment: .leading){
             HStack(alignment: .top, spacing: 30){
                 // Image
-                Rectangle()
+                Image("0")
+                    .resizable()
                     .frame(width: 110, height: 110)
-                    .foregroundColor(Color(.systemBlue))
+                    //.foregroundColor(Color(.systemBlue))
                 // info
                 VStack{
                     HStack{

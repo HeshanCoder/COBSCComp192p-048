@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuPickerView: View {
     let typeText: String
-    var options = ["House","Land"]
+    let options : Array<String>
     @State private var selectedOption = 0
     
     var body: some View {
@@ -34,6 +34,6 @@ struct MenuPickerView: View {
 
 struct MenuPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuPickerView(typeText: "")
+        MenuPickerView(typeText: "", options : ["House","Land"])
     }
 }

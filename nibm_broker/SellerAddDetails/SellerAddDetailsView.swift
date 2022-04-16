@@ -15,7 +15,8 @@ struct SellerAddDetailsView: View {
     @State private var landSize: String = ""
     @State private var images: String = ""
     @State private var townOrvillage: String = ""
-   
+    //@State private var userid: String = viewModel.userSession?.uid
+    
     @Environment(\.presentationMode) var mode
     
     
@@ -23,12 +24,16 @@ struct SellerAddDetailsView: View {
     @State private var selectedImage : UIImage?
     @State private var itemImage : Image?
     
+    @EnvironmentObject var viewModel : SignInViewModel
+    
+    var sellerAddDetailViewModel = SellerAddDetailViewModel()
+    
     var body: some View {
         VStack{
             
             // Header View
             VStack(alignment: .leading){
-               
+                
                 
                 HStack{Spacer()}
                 Button{
@@ -49,28 +54,32 @@ struct SellerAddDetailsView: View {
             .padding(.leading)
             .background(Color(.systemBlue))
             .foregroundColor(.white)
-          
+            
             
             VStack(spacing : 20){
                 
+                
+                
+                
                 Button{
                     showImagePicker.toggle()
+                    //sellerAddDetailViewModel.
                 }label:{
                     if let itemImage = itemImage {
                         itemImage
                             .resizable()
                             .modifier(ProfileImageModifire())
                     }else{
-                    Image(systemName: "tray.and.arrow.down.fill")
+                        Image(systemName: "tray.and.arrow.down.fill")
                             .renderingMode(.template)
                             .modifier(ProfileImageModifire())
                     }
                 }
                 .sheet(isPresented: $showImagePicker,
-                onDismiss: loadImage){
+                       onDismiss: loadImage){
                     ImagePicker(selectedImage: $selectedImage)
                 }
-            
+                
                 CustomInputtField(imageName: "dollarsign.circle", placeHolderText: "Price", text: $price)
                 
                 CustomInputtField(imageName: "bookmark.fill", placeHolderText: "Land / House", text: $landorHousee)
@@ -82,9 +91,12 @@ struct SellerAddDetailsView: View {
                 CustomInputtField(imageName: "house", placeHolderText: "Town / Vilage", text: $townOrvillage)
                 
                 CustomInputtField(imageName: "location", placeHolderText: "Location", text: $location)
+                    .onAppear{
+                        self.location = sellerAddDetailViewModel.geoLocation
+                    }
                 
-                CustomInputtField(imageName: "tray.and.arrow.down.fill", placeHolderText: "Upload Images", text: $images)
-
+                //CustomInputtField(imageName: "tray.and.arrow.down.fill", placeHolderText: "Upload Images", text: $images)
+                
             }
             .padding(.horizontal,32)
             .padding(.top,2)
@@ -92,8 +104,13 @@ struct SellerAddDetailsView: View {
             HStack{
                 Spacer()
             }
+            
+            if let selectedImage = selectedImage {
+      
             Button{
-                print("Update Account Button Click")
+                sellerAddDetailViewModel.createAdvertiesment(price: price, landOrHouse: landorHousee, district: district, landSize: landSize, location: location, townOrVilage: townOrvillage,imageSl: selectedImage)
+                
+                //sellerAddDetailViewModel.uploadItemImage(selectedImage)
             } label : {
                 Text("Add Advertiesment")
                     .font(.headline)
@@ -105,9 +122,11 @@ struct SellerAddDetailsView: View {
                 
             }
             .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
+                
+            }
             Spacer()
             
-           
+            
             
         }
         .ignoresSafeArea()
