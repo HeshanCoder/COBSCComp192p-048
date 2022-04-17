@@ -11,20 +11,24 @@ import UIKit
 class SellerAddDetailViewModel :  ObservableObject{
     
     private var locationManager : LocationManager
+    public var sellItemId : String = "30E99346-D818-425D-85BF-3452F6820FB6"
     @Published var geoLocation : String = ""
+    @Published var currentSellItem : SellItem?
+    
+    private let sellItemService = SellItemService()
     
     init(){
         locationManager = LocationManager()
         self.setGeoLocation()
     }
     
-       var userLatitude: String {
-           return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
-       }
-       
-       var userLongitude: String {
-           return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
-       }
+    var userLatitude: String {
+        return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
+    }
+    
+    var userLongitude: String {
+        return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
+    }
     
     func getGeoLocation() -> String{
         return  "userLatitude : \(locationManager.lastLocation?.coordinate.latitude ?? 0) and userLongitude \(locationManager.lastLocation?.coordinate.longitude ?? 0)"
@@ -49,7 +53,7 @@ class SellerAddDetailViewModel :  ObservableObject{
         
         if(uid == ""){
             self.uid = NSUUID().uuidString
-
+            
         }else{
             self.uid = ""
             self.uid = NSUUID().uuidString
@@ -74,6 +78,21 @@ class SellerAddDetailViewModel :  ObservableObject{
                 .updateData(["itemImageURL" : itemImageURL]) { _ in
                     //self.userSession = self.tempUserSession
                 }
+        }
+    }
+    
+    func fetchSelectedSellItem(uid:String){
+        print("DEBUG Sell Item Fetch id \(uid)")
+        // guard var uid = uid
+        sellItemService.fetchSellItem(withUid: uid) { sellItem in
+            self.currentSellItem = sellItem
+            print("DEBUG Sell Item Fetch succesfull \("")")
+        }
+    }
+    
+    func fetchAllItems(){
+        sellItemService.fetchSellItems(){ sellItem in
+            print("DEBUG Sell Item Fetch succesfull \("")")
         }
     }
 }

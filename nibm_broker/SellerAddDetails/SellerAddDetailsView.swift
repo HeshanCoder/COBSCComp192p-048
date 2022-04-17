@@ -110,6 +110,7 @@ struct SellerAddDetailsView: View {
             Button{
                 sellerAddDetailViewModel.createAdvertiesment(price: price, landOrHouse: landorHousee, district: district, landSize: landSize, location: location, townOrVilage: townOrvillage,imageSl: selectedImage)
                 
+                mode.wrappedValue.dismiss()
                 //sellerAddDetailViewModel.uploadItemImage(selectedImage)
             } label : {
                 Text("Add Advertiesment")

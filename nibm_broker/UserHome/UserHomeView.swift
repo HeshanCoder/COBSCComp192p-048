@@ -10,6 +10,10 @@ import SwiftUI
 struct UserHomeView: View {
     private var district = ["Colombo","Kurunegala","Kandy","Galle"]
     private var itemType = ["House", "Land"]
+    
+    @ObservedObject var userhomeViewModel  = UserHomeViewModel()
+    @EnvironmentObject var viewModel : SignInViewModel
+    
     var body: some View {
         VStack{
             HeaderBarView()
@@ -19,8 +23,21 @@ struct UserHomeView: View {
             }
             ScrollView{
                 LazyVStack{
-                    ForEach(0...20, id: \.self){ _ in
-                        AddRowView()
+                    ForEach(userhomeViewModel.sellItems){ sellitem in
+
+                            NavigationLink{
+                                if(viewModel.userSession == nil){
+                                    
+                                    SignInView()
+                                    
+                                }else{
+                                    
+                                    AddDetailsView(sellitem: sellitem)
+                                }
+                        } label: {
+                            AddRowView(sellItem: sellitem)
+                        }
+                       
                     }
                 }
             }.navigationBarHidden(true)

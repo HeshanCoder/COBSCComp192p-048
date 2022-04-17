@@ -17,6 +17,7 @@ struct AddRowView: View {
     // Envirenment objects can usen in whole applicaton
     // Initialized it when app start time.
     @EnvironmentObject var viewModel : SignInViewModel
+    let sellItem : SellItem
     
     var body: some View {
         Group{
@@ -24,13 +25,13 @@ struct AddRowView: View {
         }
     }
 }
-
-struct AddRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddRowView()
-    }
-}
-
+/*
+ struct AddRowView_Previews: PreviewProvider {
+ static var previews: some View {
+ AddRowView( sellItem: SellItem)
+ }
+ }
+ */
 extension AddRowView {
     var addRowMainInterfaceView : some View{
         VStack(alignment: .leading){
@@ -39,11 +40,11 @@ extension AddRowView {
                 Image("0")
                     .resizable()
                     .frame(width: 110, height: 110)
-                    //.foregroundColor(Color(.systemBlue))
+                //.foregroundColor(Color(.systemBlue))
                 // info
                 VStack{
                     HStack{
-                        Text("120000 LKR")
+                        Text(sellItem.price)
                             .font(.title3)
                             .bold()
                         
@@ -51,13 +52,13 @@ extension AddRowView {
                             .font(.title3)
                             .bold()
                         
-                        Text("House")
+                        Text(sellItem.landOrHouse)
                             .font(.title3)
                             .bold()
                     }
                     Spacer()
                     HStack{
-                        Text("Colombo")
+                        Text(sellItem.district)
                             .font(.title3)
                             .bold()
                         
@@ -65,32 +66,32 @@ extension AddRowView {
                             .font(.title3)
                             .bold()
                         
-                        Text("40 purch")
+                        Text(sellItem.landSize)
                             .font(.title3)
                             .bold()
                     }
                     Spacer()
                     HStack{
-                        Text("Town")
+                        Text(sellItem.townOrVilage)
                             .font(.title3)
                             .bold()
-                        
-                        NavigationLink{
-                            if(viewModel.userSession == nil){
-                                SignInView()
-                            }else{
-                                AddDetailsView()
-                            }
-                        } label:{
-                            Text("View")
-                        }
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .frame(width: 60, height: 22)
-                        .background(Color(.systemBlue))
-                        .clipShape(Capsule())
-                        .padding(.leading)
-                        
+                        /*
+                         NavigationLink{
+                         if(viewModel.userSession == nil){
+                         SignInView()
+                         }else{
+                         AddDetailsView()
+                         }
+                         } label:{
+                         Text("View")
+                         }
+                         .font(.headline)
+                         .foregroundColor(.white)
+                         .frame(width: 60, height: 22)
+                         .background(Color(.systemBlue))
+                         .clipShape(Capsule())
+                         .padding(.leading)
+                         */
                     }
                 }
                 .frame(height:100)

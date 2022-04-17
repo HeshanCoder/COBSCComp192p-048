@@ -9,5 +9,5 @@ import Firebase
 import UIKit
 
 struct AdvertiementModel{
-    
+    //var advertiemtName : String
 }

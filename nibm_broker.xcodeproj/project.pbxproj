@@ -44,6 +44,11 @@
 		AFDACC552805C44B0052CD56 /* nibm_brokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDACC542805C44B0052CD56 /* nibm_brokerUITests.swift */; };
 		AFDACC572805C44B0052CD56 /* nibm_brokerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDACC562805C44B0052CD56 /* nibm_brokerUITestsLaunchTests.swift */; };
 		AFDACC642805D0090052CD56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFDACC632805D0090052CD56 /* LaunchScreen.storyboard */; };
+		AFF92092280CA1660051603D /* SellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92090280CA1650051603D /* SellItem.swift */; };
+		AFF92093280CA1660051603D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92091280CA1660051603D /* User.swift */; };
+		AFF92095280CA1B40051603D /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92094280CA1B40051603D /* ResetPasswordView.swift */; };
+		AFF92098280CA1FA0051603D /* SellItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92096280CA1FA0051603D /* SellItemService.swift */; };
+		AFF92099280CA1FA0051603D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92097280CA1FA0051603D /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +105,11 @@
 		AFDACC542805C44B0052CD56 /* nibm_brokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nibm_brokerUITests.swift; sourceTree = "<group>"; };
 		AFDACC562805C44B0052CD56 /* nibm_brokerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nibm_brokerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AFDACC632805D0090052CD56 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFF92090280CA1650051603D /* SellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellItem.swift; sourceTree = "<group>"; };
+		AFF92091280CA1660051603D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AFF92094280CA1B40051603D /* ResetPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		AFF92096280CA1FA0051603D /* SellItemService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellItemService.swift; sourceTree = "<group>"; };
+		AFF92097280CA1FA0051603D /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +207,8 @@
 		AF1C27DE280AB70D00B60609 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AFF92096280CA1FA0051603D /* SellItemService.swift */,
+				AFF92097280CA1FA0051603D /* UserService.swift */,
 				AF1C27DF280AB74100B60609 /* ImageUploader.swift */,
 				AF1C27E4280ADC8700B60609 /* locationManager.swift */,
 			);
@@ -206,6 +218,8 @@
 		AF1C27E1280AC31C00B60609 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AFF92090280CA1650051603D /* SellItem.swift */,
+				AFF92091280CA1660051603D /* User.swift */,
 				AF1C27E2280AC34F00B60609 /* AdvertiementModel.swift */,
 			);
 			path = Models;
@@ -255,6 +269,7 @@
 		AFDACC382805C4460052CD56 /* nibm_broker */ = {
 			isa = PBXGroup;
 			children = (
+				AFF9208F280CA0A20051603D /* ResetPassword */,
 				AF1C27E1280AC31C00B60609 /* Models */,
 				AF1C27DE280AB70D00B60609 /* Services */,
 				AF64D005280A0C2F0010E8A3 /* Utils */,
@@ -299,6 +314,14 @@
 				AFDACC562805C44B0052CD56 /* nibm_brokerUITestsLaunchTests.swift */,
 			);
 			path = nibm_brokerUITests;
+			sourceTree = "<group>";
+		};
+		AFF9208F280CA0A20051603D /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				AFF92094280CA1B40051603D /* ResetPasswordView.swift */,
+			);
+			path = ResetPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF92098280CA1FA0051603D /* SellItemService.swift in Sources */,
 				AF11A1B42807335D00F931AC /* SettingsView.swift in Sources */,
 				AF11A19C2807308000F931AC /* UserHomeViewModel.swift in Sources */,
 				AF21A5882808587F003D0FF5 /* AddRowView.swift in Sources */,
@@ -454,6 +478,7 @@
 				AF21A58A280863C7003D0FF5 /* HeaderBarView.swift in Sources */,
 				AFDACC3C2805C4460052CD56 /* ContentView.swift in Sources */,
 				AF21A58C28087E26003D0FF5 /* SelectOptionView.swift in Sources */,
+				AFF92099280CA1FA0051603D /* UserService.swift in Sources */,
 				AF83470628074BFC007C3F37 /* RoundedShape.swift in Sources */,
 				AF11A1A92807327700F931AC /* AddDetailsView.swift in Sources */,
 				AF4137322807F59A00E65934 /* CustomInputtField.swift in Sources */,
@@ -462,11 +487,14 @@
 				AF11A1AF280732FF00F931AC /* SellerAddDetailsView.swift in Sources */,
 				AF21A58E280885AD003D0FF5 /* MenuPickerView.swift in Sources */,
 				AF11A19A2807306000F931AC /* UserHomeView.swift in Sources */,
+				AFF92093280CA1660051603D /* User.swift in Sources */,
 				AF11A19528072FE000F931AC /* GuestHomeView.swift in Sources */,
 				AF11A1A42807320E00F931AC /* SignUpView.swift in Sources */,
 				AF1C27E3280AC34F00B60609 /* AdvertiementModel.swift in Sources */,
+				AFF92092280CA1660051603D /* SellItem.swift in Sources */,
 				AFDACC3A2805C4460052CD56 /* nibm_brokerApp.swift in Sources */,
 				AF11A1AB2807328B00F931AC /* AddDetailsViewModel.swift in Sources */,
+				AFF92095280CA1B40051603D /* ResetPasswordView.swift in Sources */,
 				AF11A1B62807338000F931AC /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

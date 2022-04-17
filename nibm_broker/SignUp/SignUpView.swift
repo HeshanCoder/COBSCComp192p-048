@@ -81,7 +81,7 @@ struct SignUpView: View {
                 CustomInputtField(imageName: "lock", placeHolderText: "Password", isSecureField: true, text: $password)
                 
                 CustomInputtField(imageName: "lock", placeHolderText: "Confirm Passrod", isSecureField: true,  text: $cmPassword)
-             
+                
                 
             }
             .padding(32)
@@ -96,19 +96,19 @@ struct SignUpView: View {
                     .background(Color(.systemBlue))
                     .clipShape(Capsule())
                     .padding()
-                    
+                
             }
             .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
             
             
-            	
+            
             Spacer()
             
             Button{
                 presentationModeSu.wrappedValue.dismiss()
             } label:{
                 HStack{
-                    Text("Already hasva an account? ")
+                    Text("Already have an account? ")
                         .font(.footnote)
                     Text("Sign In")
                         .font(.footnote)

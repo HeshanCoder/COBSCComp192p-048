@@ -9,10 +9,12 @@ import SwiftUI
 
 struct AddDetailsView: View {
     
-    private var numberOfImages = 6
-    private let timer = Timer.publish(every: 3,  on: .main,in: .common).autoconnect()
-    @State private var currentIndex = 0
+    public var numberOfImages = 6
+    public let timer = Timer.publish(every: 3,  on: .main,in: .common).autoconnect()
+    @State public var currentIndex = 0
     @Environment(\.presentationMode) var mode
+    
+    public var sellitem : SellItem
     func previouse(){
         withAnimation{
             currentIndex = currentIndex > numberOfImages ? currentIndex - 1 : numberOfImages - 1
@@ -42,13 +44,13 @@ struct AddDetailsView: View {
             }
         }
     }
-
+    
     var body: some View {
         GeometryReader{ proxy in
             VStack{
                 // Header View
                 VStack(alignment: .leading){
-
+                    
                     HStack{Spacer()}
                     Button{
                         mode.wrappedValue.dismiss()
@@ -78,14 +80,14 @@ struct AddDetailsView: View {
                                 .scaledToFit()
                                 .overlay(Color.black.opacity(0.3))
                                 .tag(num)
-                                
+                            
                         }
                         
                     }
                     .tabViewStyle(PageTabViewStyle())
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .frame(width: proxy.size.width, height: proxy.size.height/3)
-
+                    
                     .padding(.bottom, 10)
                     .padding(.top,0)
                     //.padding(.leading,3)
@@ -105,7 +107,7 @@ struct AddDetailsView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
-                        Text("20,000,000.00")
+                        Text(sellitem.price)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
@@ -115,7 +117,7 @@ struct AddDetailsView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
-                        Text("N/A")
+                        Text(sellitem.location)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
@@ -125,7 +127,7 @@ struct AddDetailsView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
-                        Text("House")
+                        Text(sellitem.landOrHouse)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
@@ -135,7 +137,7 @@ struct AddDetailsView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
-                        Text("Colombo 07")
+                        Text(sellitem.district)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
@@ -145,7 +147,7 @@ struct AddDetailsView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
-                        Text("Town")
+                        Text(sellitem.townOrVilage)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
@@ -158,9 +160,10 @@ struct AddDetailsView: View {
         .navigationBarHidden(true)
     }
 }
-
-struct AddDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddDetailsView()
-    }
-}
+/*
+ struct AddDetailsView_Previews: PreviewProvider {
+ static var previews: some View {
+ AddDetailsView()
+ }
+ }
+ */

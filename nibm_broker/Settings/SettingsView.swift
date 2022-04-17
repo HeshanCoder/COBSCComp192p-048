@@ -49,6 +49,60 @@ struct SettingsView: View {
             .background(Color(.systemBlue))
             .foregroundColor(.white)
             
+            
+            if let user = AuthViewModel.currentUser{
+                VStack(spacing : 20){
+                    CustomInputtField(imageName: "envelope", placeHolderText: "Email", text: $email).onAppear{
+                        // binding to text field
+                        self.email = user.email
+                    }.disabled(true)
+                    
+                    CustomInputtField(imageName: "person", placeHolderText: "Usernmae", text: $username).onAppear{
+                        // binding to text field
+                        self.username = user.username
+                    }.disabled(true)
+                    
+                    CustomInputtField(imageName: "person.2.fill", placeHolderText: "Gender", text: $gender).onAppear{
+                        // binding to text field
+                        self.gender = user.gender
+                    }.disabled(true)
+                    
+                    CustomInputtField(imageName: "calendar", placeHolderText: "Date of Birth", text: $dob).onAppear{
+                        // binding to text field
+                        self.dob = user.birthDate
+                    }.disabled(true)
+                    
+                    CustomInputtField(imageName: "person", placeHolderText: "Name", text: $name).onAppear{
+                        // binding to text field
+                        self.name = user.name
+                    }.disabled(true)
+                    
+                    CustomInputtField(imageName: "phone", placeHolderText: "Mobile", text: $mobile)
+                        .onAppear{
+                            // binding to text field
+                            self.mobile = user.mobile
+                        }
+                    
+                    CustomInputtField(imageName: "location", placeHolderText: "Location", text: $location)
+                        .onAppear{
+                            // binding to text field
+                            self.location = user.location
+                        }
+                    /*
+                    CustomInputtField(imageName: "lock", placeHolderText: "Old Password", text: $password)
+                    
+                    CustomInputtField(imageName: "lock", placeHolderText: "New Password", text: $newPassword)
+                    
+                    CustomInputtField(imageName: "lock", placeHolderText: "Confirm Passrod", text: $newCmPassword)
+                    
+                    */
+                }
+                .padding(.horizontal,32)
+                .padding(.top,44)
+                
+            }
+            
+            else{
             VStack(spacing : 20){
                 CustomInputtField(imageName: "envelope", placeHolderText: "Email", text: $email).disabled(true)
                 
@@ -63,23 +117,25 @@ struct SettingsView: View {
                 CustomInputtField(imageName: "phone", placeHolderText: "Mobile", text: $mobile)
                 
                 CustomInputtField(imageName: "location", placeHolderText: "Location", text: $location)
-                
+                /*
                 CustomInputtField(imageName: "lock", placeHolderText: "Old Password", text: $password)
                 
                 CustomInputtField(imageName: "lock", placeHolderText: "New Password", text: $newPassword)
                 
                 CustomInputtField(imageName: "lock", placeHolderText: "Confirm Passrod", text: $newCmPassword)
-             
                 
+                */
             }
             .padding(.horizontal,32)
             .padding(.top,44)
+            }
             
             HStack{
                 Spacer()
             }
             Button{
-                print("Update Account Button Click")
+                AuthViewModel.updateUser(withemail: email, username: username, gender: gender, birthDate: dob, name: name, mobile: mobile, location: location)
+                
             } label : {
                 Text("Update Account")
                     .font(.headline)
@@ -92,6 +148,23 @@ struct SettingsView: View {
             }
             .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
             Spacer()
+            
+            NavigationLink{
+                ResetPasswordView()
+                //mode.wrappedValue.dismiss()
+            } label: {
+                HStack{
+                    Text("")
+                        .font(.footnote)
+                    Text("Reset / Change Password")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                    
+                }
+            }
+            .padding()
+            .foregroundColor(Color(.systemBlue))
+            
             
             Button{
                 AuthViewModel.signOut()
