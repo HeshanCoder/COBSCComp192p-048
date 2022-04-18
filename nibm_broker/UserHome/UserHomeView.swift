@@ -16,11 +16,14 @@ struct UserHomeView: View {
     
     var body: some View {
         VStack{
-            HeaderBarView()
+            //HeaderBarView()
+            MainTabView()
+            /*
             HStack{
                 MenuPickerView(typeText:"House/Land", options: itemType)
                 MenuPickerView(typeText:"District",options: district)
             }
+             */
             ScrollView{
                 LazyVStack{
                     ForEach(userhomeViewModel.sellItems){ sellitem in
@@ -41,6 +44,7 @@ struct UserHomeView: View {
                     }
                 }
             }.navigationBarHidden(true)
+            
         }
     }
 }

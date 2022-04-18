@@ -45,7 +45,7 @@ struct SignUpView: View {
                     Image(systemName: "arrow.left")
                         .resizable()
                         .frame(width: 20 , height: 16)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .offset(x: 1, y: 12)
                 }
                 Text("Hello..!,")
@@ -58,8 +58,8 @@ struct SignUpView: View {
             }
             .frame(height:260)
             .padding(.leading)
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
+            .background(.white)
+            .foregroundColor(.black)
             
             VStack(spacing : 20){
                 CustomInputtField(imageName: "envelope", placeHolderText: "Email", text: $email)
@@ -93,7 +93,7 @@ struct SignUpView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(width: 340, height: 50)
-                    .background(Color(.systemBlue))
+                    .background(Color(.systemYellow))
                     .clipShape(Capsule())
                     .padding()
                 
@@ -117,7 +117,7 @@ struct SignUpView: View {
                 }
             }
             .padding(.bottom,30)
-            .foregroundColor(Color(.systemBlue))
+            .foregroundColor(Color(.systemYellow))
             
         }
         .navigationBarHidden(false)

@@ -49,6 +49,8 @@
 		AFF92095280CA1B40051603D /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92094280CA1B40051603D /* ResetPasswordView.swift */; };
 		AFF92098280CA1FA0051603D /* SellItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92096280CA1FA0051603D /* SellItemService.swift */; };
 		AFF92099280CA1FA0051603D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF92097280CA1FA0051603D /* UserService.swift */; };
+		AFFC9E03280D957200574A14 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFC9E02280D957200574A14 /* MainTabView.swift */; };
+		AFFC9E05280DA5A300574A14 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFC9E04280DA5A300574A14 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		AFF92094280CA1B40051603D /* ResetPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		AFF92096280CA1FA0051603D /* SellItemService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellItemService.swift; sourceTree = "<group>"; };
 		AFF92097280CA1FA0051603D /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		AFFC9E02280D957200574A14 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		AFFC9E04280DA5A300574A14 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +246,8 @@
 				AF21A589280863C7003D0FF5 /* HeaderBarView.swift */,
 				AF21A58B28087E26003D0FF5 /* SelectOptionView.swift */,
 				AF21A58D280885AD003D0FF5 /* MenuPickerView.swift */,
+				AFFC9E02280D957200574A14 /* MainTabView.swift */,
+				AFFC9E04280DA5A300574A14 /* HeaderView.swift */,
 			);
 			path = Componnet;
 			sourceTree = "<group>";
@@ -468,9 +474,11 @@
 				AFF92098280CA1FA0051603D /* SellItemService.swift in Sources */,
 				AF11A1B42807335D00F931AC /* SettingsView.swift in Sources */,
 				AF11A19C2807308000F931AC /* UserHomeViewModel.swift in Sources */,
+				AFFC9E03280D957200574A14 /* MainTabView.swift in Sources */,
 				AF21A5882808587F003D0FF5 /* AddRowView.swift in Sources */,
 				AF11A19F2807314200F931AC /* SignInView.swift in Sources */,
 				AF11A1A62807322A00F931AC /* SignUpViewModel.swift in Sources */,
+				AFFC9E05280DA5A300574A14 /* HeaderView.swift in Sources */,
 				AF1C27E0280AB74100B60609 /* ImageUploader.swift in Sources */,
 				AF11A1972807300F00F931AC /* GuestHomeViewModel.swift in Sources */,
 				AF11A1B12807331F00F931AC /* SellerAddDetailsViewModel.swift in Sources */,

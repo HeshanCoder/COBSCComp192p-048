@@ -43,7 +43,7 @@ struct SellerAddDetailsView: View {
                     Image(systemName: "arrow.left")
                         .resizable()
                         .frame(width: 20 , height: 16)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .offset(x: 1, y: 12)
                 }
                 Text("Sell a Property")
@@ -52,8 +52,8 @@ struct SellerAddDetailsView: View {
             }
             .frame(height:150)
             .padding(.leading)
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
+            .background(.white)
+            .foregroundColor(.black)
             
             
             VStack(spacing : 20){
@@ -117,7 +117,7 @@ struct SellerAddDetailsView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(width: 340, height: 50)
-                    .background(Color(.systemBlue))
+                    .background(Color(.systemYellow))
                     .clipShape(Capsule())
                     .padding()
                 
@@ -146,7 +146,7 @@ struct SellerAddDetailsView: View {
 private struct  ProfileImageModifire : ViewModifier{
     func body(content : Content) -> some View {
         content
-            .foregroundColor(Color(.systemBlue))
+            .foregroundColor(Color(.systemYellow))
             .scaledToFit()
             .frame(width: 150, height: 150)
     }

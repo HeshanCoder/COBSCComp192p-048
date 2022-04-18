@@ -25,13 +25,15 @@ struct AddRowView: View {
         }
     }
 }
-/*
- struct AddRowView_Previews: PreviewProvider {
- static var previews: some View {
- AddRowView( sellItem: SellItem)
- }
- }
- */
+
+struct AddRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        //AddRowView( sellItem: SellItem)
+        let add = SellItem(id: "123", price: "120,000.00", landOrHouse: "Land", district: "Colombo", landSize: "20 ph", location: "1234444,-244444", townOrVilage: "Town", itemImageURL: "N?A")
+        return AddRowView(sellItem: add)
+    }
+}
+
 extension AddRowView {
     var addRowMainInterfaceView : some View{
         VStack(alignment: .leading){
@@ -39,42 +41,41 @@ extension AddRowView {
                 // Image
                 Image("0")
                     .resizable()
-                    .frame(width: 110, height: 110)
+                    .frame(width: 130, height: 130)
                 //.foregroundColor(Color(.systemBlue))
                 // info
                 VStack{
                     HStack{
-                        Text(sellItem.price)
+                        Text(sellItem.price + " LKR")
                             .font(.title3)
                             .bold()
-                        
-                        Text(" | ")
-                            .font(.title3)
-                            .bold()
-                        
+                        Spacer()
+  
+                    }
+                    HStack{
                         Text(sellItem.landOrHouse)
                             .font(.title3)
                             .bold()
+                            Spacer()
                     }
-                    Spacer()
+
                     HStack{
                         Text(sellItem.district)
                             .font(.title3)
                             .bold()
-                        
-                        Text(" | ")
-                            .font(.title3)
-                            .bold()
-                        
+                        Spacer()
+                    }
+                    HStack{
                         Text(sellItem.landSize)
                             .font(.title3)
                             .bold()
+                        Spacer()
                     }
-                    Spacer()
                     HStack{
                         Text(sellItem.townOrVilage)
                             .font(.title3)
                             .bold()
+                        Spacer()
                         /*
                          NavigationLink{
                          if(viewModel.userSession == nil){
@@ -94,15 +95,13 @@ extension AddRowView {
                          */
                     }
                 }
-                .frame(height:100)
+                .frame(height:120)
             }
-            HStack  {
-                Spacer()
-            }
+
             Divider()
         }
         .padding(.leading)
         .padding(.top)
-        
+        .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
     }
 }

@@ -59,7 +59,7 @@ struct AddDetailsView: View {
                         Image(systemName: "arrow.left")
                             .resizable()
                             .frame(width: 20 , height: 16)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                             .offset(x: 1, y: 12)
                     }
                     Text("Adverticement")
@@ -68,8 +68,8 @@ struct AddDetailsView: View {
                 }
                 .frame(height:150)
                 .padding(.leading)
-                .background(Color(.systemBlue))
-                .foregroundColor(.white)
+                .background(.white)
+                .foregroundColor(.black)
                 
                 VStack{
                     

@@ -42,8 +42,8 @@ struct SignInView: View {
             }
             .frame(height:260)
             .padding(.leading)
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
+            .background(.white)
+            .foregroundColor(.black)
             
             VStack(spacing : 40){
                 //TextField("Email",text: $email)
@@ -64,7 +64,7 @@ struct SignInView: View {
                     Text("Forget Password?")
                         .font(.caption)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(.systemBlue))
+                        .foregroundColor(Color(.systemYellow))
                         .padding(.top)
                         .padding(.trailing, 24)
                     //.frame(width: 360, height: 40)
@@ -78,7 +78,7 @@ struct SignInView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(width: 340, height: 50)
-                    .background(Color(.systemBlue))
+                    .background(Color(.systemYellow))
                     .clipShape(Capsule())
                     .padding()
                 
@@ -100,7 +100,7 @@ struct SignInView: View {
                 }
             }
             .padding(.bottom,50)
-            .foregroundColor(Color(.systemBlue))
+            .foregroundColor(Color(.systemYellow))
             
         }
         .ignoresSafeArea()

@@ -27,6 +27,7 @@ struct SettingsView: View {
         VStack{
             
             // Header View
+
             VStack(alignment: .leading){
 
                 HStack{Spacer()}
@@ -37,7 +38,7 @@ struct SettingsView: View {
                     Image(systemName: "arrow.left")
                         .resizable()
                         .frame(width: 20 , height: 16)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .offset(x: 1, y: 12)
                 }
                 Text("Settings")
@@ -46,9 +47,9 @@ struct SettingsView: View {
             }
             .frame(height:150)
             .padding(.leading)
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
-            
+            .background(.white)
+            .foregroundColor(.black)
+           
             
             if let user = AuthViewModel.currentUser{
                 VStack(spacing : 20){
@@ -141,7 +142,7 @@ struct SettingsView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(width: 340, height: 50)
-                    .background(Color(.systemBlue))
+                    .background(Color(.systemYellow))
                     .clipShape(Capsule())
                     .padding()
                 
@@ -163,7 +164,7 @@ struct SettingsView: View {
                 }
             }
             .padding()
-            .foregroundColor(Color(.systemBlue))
+            .foregroundColor(Color(.systemYellow))
             
             
             Button{
@@ -181,7 +182,7 @@ struct SettingsView: View {
                 }
             }
             .padding(.bottom,50)
-            .foregroundColor(Color(.systemBlue))
+            .foregroundColor(Color(.systemYellow))
             
         }
         .ignoresSafeArea()

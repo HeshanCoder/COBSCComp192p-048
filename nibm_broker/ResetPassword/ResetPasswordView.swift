@@ -28,7 +28,7 @@ struct ResetPasswordView: View {
                     Image(systemName: "arrow.left")
                         .resizable()
                         .frame(width: 20 , height: 16)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .offset(x: 1, y: 12)
                 }
                 //Text("Hello")
@@ -41,8 +41,8 @@ struct ResetPasswordView: View {
             }
             .frame(height:260)
             .padding(.leading)
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
+            .background(.white)
+            .foregroundColor(.black)
             
             VStack(spacing : 40){
                 CustomInputtField(imageName: "envelope", placeHolderText: "Email", text: $email)
@@ -74,7 +74,7 @@ struct ResetPasswordView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(width: 340, height: 50)
-                    .background(Color(.systemBlue))
+                    .background(Color(.systemYellow))
                     .clipShape(Capsule())
                     .padding()
                 
@@ -95,7 +95,7 @@ struct ResetPasswordView: View {
                 }
             }
             .padding(.bottom,70)
-            .foregroundColor(Color(.systemBlue))
+            .foregroundColor(Color(.systemYellow))
         }
         .ignoresSafeArea()
         .navigationBarHidden(true)
